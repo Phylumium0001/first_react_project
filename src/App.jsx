@@ -5,6 +5,7 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const animals = ["Dog","Lion","Tiger","Panda","Fish"]
 
   return (
     <>
@@ -27,12 +28,16 @@ function App() {
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
-      </p> */}
-      <div>
-        <h1>React App</h1>
-        <p>This is a simple React app.</p>
-        <button onClick={() => setCount(count + 1)}>Clicked {count}</button>
-      </div>
+      </p> */
+      <>
+      <h1>Animals</h1>
+      <ol>
+        {animals.map((animal)=>{
+          return <li key={animal}>{animal}</li>
+        })}
+      </ol>
+      </>
+      }
     </>
   )
 }
